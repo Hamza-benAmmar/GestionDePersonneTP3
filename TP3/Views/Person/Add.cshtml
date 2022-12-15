@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model TP3.Models.Person
+@{
+    @using (Html.BeginForm("Add", "person", FormMethod.Post))
+    {
+        <div class="form-outline mb-4">
+            @Html.TextBoxFor(m => m.id, new {@class ="form-control" , @id="form3Example3"})
+            <label class="form-label" for="form3Example3">ID:</label>
+        </div>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="form-outline">
+                    @Html.TextBoxFor(m => m.first_name, new {@class ="form-control" , @id="form3Example1"})
+                    <label class="form-label" for="form3Example1">First name</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    @Html.TextBoxFor(m => m.last_name, new {@class ="form-control" , @id="form3Example2"})
+                    <label class="form-label" for="form3Example2">Last name</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            @Html.TextBoxFor(m => m.email, new {@class ="form-control" , @id="form3Example3"})
+            <label class="form-label" for="form3Example3">Email address</label>
+        </div>
+
+        <!-- Country input -->
+        <div class="form-outline mb-4">
+            @Html.TextBoxFor(m => m.country, new {@class ="form-control" , @id="form3Example4"})
+            <label class="form-label" for="form3Example4">Country</label>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+                @Html.TextBoxFor(m => m.image, new {@class ="form-control" , @id="form3Example5"})
+                <label class="form-label" for="form3Example5">image</label>
+            </div>
+        </div>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+
+        <!-- Register buttons -->
+    }
+}

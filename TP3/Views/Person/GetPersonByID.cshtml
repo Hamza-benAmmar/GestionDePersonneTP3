@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model TP3.Models.Person
+@{
+    @if (Model==null)
+    {
+        <div class="alert alert-danger" role="alert">
+            ID:@ViewBag.Id n'est pas valide 
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="card flex-row">
+                <img class="card-img-left example-card-img-responsive" src="@Model.image" />
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm">@Model.first_name @Model.last_name</h4>
+                    <p class="card-text">ID : @Model.id</p>
+                    <p class="card-text">email : @Model.email</p>
+                    <p class="card-text">country : @Model.country</p>
+                </div>
+            </div>
+        </div>
+    }
+}

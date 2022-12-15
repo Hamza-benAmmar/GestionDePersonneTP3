@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<TP3.Models.Person>
+<div class="container">
+  <div class="row">
+      @{ foreach(TP3.Models.Person p in Model){
+                <div class="card flex-row"><img class="card-img-left example-card-img-responsive" src=@p.image alt="image ee"/>
+                  <div class="card-body">
+                    <h4 class="card-title h5 h4-sm">@p.first_name @p.last_name</h4>
+                    <p class="card-text">ID : @p.id</p>
+                    <p class="card-text">email : @p.email</p>
+                    <p class="card-text">country : @p.country</p>
+                    @Html.ActionLink("Delete","Delete", "Person", new { id = p.id})
+                  </div>
+                </div>
+
+      }
+    }
+  </div>
+</div>

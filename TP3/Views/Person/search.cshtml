@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model TP3.Models.Person
+    @using (Html.BeginForm("search", "person", FormMethod.Post))
+    {
+        <div>enter first name  : 
+        @Html.TextBoxFor(p => p.first_name )
+        </div>
+        <div> enter country : 
+        @Html.TextBoxFor(p => p.country)
+        </div>
+        <input type="submit" value="Search">
+    }
